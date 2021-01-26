@@ -16,7 +16,7 @@
           open-all
         >
           <template #prepend="{ item }">
-            <v-icon>
+            <v-icon v-if="item.icon">
               {{ item.icon }}
             </v-icon>
           </template>
@@ -65,17 +65,17 @@ export default {
       tree: [
         {
           id: 1,
-          icon: 'mdi-apps',
+          icon: 'mdi-view-dashboard',
           name: 'Dashboard',
           to: '/'
         },
         {
           id: 2,
           name: 'Gallery',
+          icon: 'mdi-folder-image',
           children: [
             {
               id: 3,
-              icon: 'mdi-chart-bubble',
               name: 'Painting',
               to: '/gallery/painting'
             }

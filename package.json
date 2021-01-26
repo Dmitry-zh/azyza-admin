@@ -12,8 +12,10 @@
     "test": "jest"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "core-js": "^3.8.2",
-    "nuxt": "^2.14.12"
+    "nuxt": "^2.14.12",
+    "v-mask": "^2.2.4"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^5.0.0",
