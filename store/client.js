@@ -30,10 +30,20 @@ export const actions = {
 
     return client.get(endpoint, { params })
   },
+  fetchOne ({ commit }, payload) {
+    const { id, endpoint } = payload
+    const fullPath = `${endpoint}/${id}`
 
-  postEntity ({ commit }, payload) {
+    return client.get(fullPath)
+  },
+  createEntity ({ commit }, payload) {
     const { reqBody, endpoint, headers } = payload
 
     return client.post(endpoint, reqBody, headers)
+  },
+  updateEntity ({ commit }, payload) {
+    const { reqBody, endpoint, headers } = payload
+
+    return client.put(endpoint, reqBody, headers)
   }
 }
